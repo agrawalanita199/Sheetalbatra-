@@ -1,0 +1,55 @@
+.screen1 {
+  height: 100vh;
+  background-image: url("C:\Users\Vipin Agrawal\sheetal_ui\public\bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 80%;
+  max-width: 400px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #c7a24f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+small {
+  display: block;
+  margin-top: 15px;
+  color: #666;
+}
+
+small a {
+  color: #c7a24f;
+}
