@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabaseClient";
 import "./Screen1.css";
 
+
+  
 export default function Screen1() {
   const navigate = useNavigate();
   const [mobile, setMobile] = useState("");

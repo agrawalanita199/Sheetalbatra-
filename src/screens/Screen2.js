@@ -15,11 +15,10 @@ export default function Screen2() {
   const inputRefs = useRef([]);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const t = setInterval(() => {
       setTime((prev) => (prev > 0 ? prev - 1 : 0));
     }, 1000);
-
-    return () => clearInterval(timer);
+    return () => clearInterval(t);
   }, []);
 
   const handleChange = (value, index) => {
@@ -70,25 +69,24 @@ export default function Screen2() {
   };
 
   return (
-    <div className="screen2">
-      <img src="/logo.png" alt="logo" className="logo2" />
+    <div className="screen2-bg">
+      <div className="card">
+        <h1 className="title">Welcome to Sheetal Batra</h1>
 
-      <div className="card2">
-        <h2>Welcome to Sheetal Batra</h2>
-        <p>Your personalised Sheetal Batra experience awaits.</p>
+        <p className="subtitle">
+          Your personalised Sheetal Batra experience awaits.
+        </p>
 
         <p className="otp-text">OTP has been sent to +91 {mobile}</p>
 
-        <div className="otp-box">
-          {otp.map((digit, idx) => (
+        <div className="otpBox">
+          {otp.map((val, i) => (
             <input
-              key={idx}
-              maxLength="1"
-              className="otp-input"
-              value={digit}
-              ref={(el) => (inputRefs.current[idx] = el)}
-              onChange={(e) => handleChange(e.target.value, idx)}
-              onKeyDown={(e) => handleKeyDown(e, idx)}
+              key={i}
+              ref={(el) => (inputs.current[i] = el)}
+              maxLength={1}
+              value={val}
+              onChange={(e) => handleOtp(e.target.value, i)}
             />
           ))}
         </div>
@@ -97,8 +95,10 @@ export default function Screen2() {
           {loading ? "Verifying..." : "Continue"}
         </button>
 
-        <p className="timer">You can resend the code in {time} seconds</p>
+        <p className="timer-text">
+          You can resend the code in {time} seconds
+        </p>
       </div>
-    </div>
-  );
+    </div>
+  );
 }

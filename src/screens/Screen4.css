@@ -1,0 +1,127 @@
+
+.screen4-bg {
+  background-image: url("C:\Users\Vipin Agrawal\sheetal_ui\public\bg.png"); 
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* WHITE CARD */
+.screen4-card {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.title {
+  font-family: serif;
+  color: #c7a24f;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* Form Rows */
+.row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.field {
+  flex: 1;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #c7a24f;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+}
+
+/* SIZE BOX */
+.size-box {
+  margin: 25px 0;
+}
+
+.size-label {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.sizes {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.size-btn {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.size-btn.active {
+  background: #c7a24f;
+  color: white;
+}
+
+/* Measurement bar */
+.measure-bar {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.plus-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #c7a24f;
+  cursor: pointer;
+}
+
+/* Comments */
+.comments textarea {
+  width: 100%;
+  height: 80px;
+  border: none;
+  border-bottom: 2px solid #c7a24f;
+  padding: 10px;
+  outline: none;
+  background: transparent;
+}
+
+/* Continue Button */
+.continue-box {
+  text-align: right;
+}
+
+.continue-btn {
+  background: #c7a24f;
+  color: white;
+  padding: 12px 45px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
