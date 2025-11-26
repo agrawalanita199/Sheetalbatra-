@@ -1,0 +1,75 @@
+.screen1 {
+  height: 100vh;
+  background-image: url("../images/Screen1bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 80%;
+  max-width: 480px;
+  height: 500px;
+  background: #FFFFFF73;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 20px;
+  
+}
+p{
+  font-size: 20px;
+  font-style: regular;
+  font-weight: 400;
+  margin-top: 21px;
+}
+h2{
+  font-weight: 500;
+  font-size: 32px;
+  font-style: medium;
+  color: #D5B85A;
+}
+
+.input {
+  width: 100%;
+  height: 56px;
+  padding: 12px;
+  margin-top: 80px;
+  border-radius: 3px;
+   box-sizing: border-box;
+  border: 1px solid #aaa;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 24px;
+  height: 56px;
+  padding: 12px;
+  background: #c7a24f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+small {
+  display: block;
+  margin-top: 110px;
+  color: #666;
+}
+
+small a {
+  
+  color: #c7a24f;
+}
