@@ -1,118 +1,80 @@
-.screen2 {
-  height: 100vh;
-<<<<<<< HEAD
-  background-image: url("C:\Users\Vipin Agrawal\sheetal_ui\public\bg.png");
-=======
-  background-image: url("../images/Screen1bg.png");
->>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
+
+.screen2-bg {
+  background-image: url("C:\Users\Vipin Agrawal\sheetal_ui\public\bg.png");   
   background-size: cover;
   background-position: center;
+  width: 100%;
+  min-height: 100vh;
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
-<<<<<<< HEAD
-  padding-top: 40px;
-=======
   justify-content: center;
-  
->>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
+  align-items: center;
+  padding: 20px;
 }
 
-.logo2 {
-  width: 120px;
-  margin-bottom: 20px;
+/* CENTER CARD */
+.card {
+  width: 90%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 35px 25px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
-.card2 {
-  width: 80%;
-<<<<<<< HEAD
-  max-width: 430px;
-  background: white;
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 20px;
-=======
-  max-width: 480px;
-  height: 500px;
-  background: #FFFFFF73;
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 20px;
-  
+/* TEXTS */
+.title {
+  font-size: 26px;
+  color: #b38b37;
+  margin-bottom: 10px;
 }
-p{
-  font-size: 20px;
-  font-style: regular;
-  font-weight: 400;
-  margin-top: 21px;
-}
-h2{
-  font-weight: 500;
-  font-size: 32px;
-  font-style: medium;
-  color: #D5B85A;
->>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
+
+.subtitle {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
 }
 
 .otp-text {
-  margin: 10px 0;
-  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.otp-box {
+/* OTP BOX */
+.otpBox {
   display: flex;
-  justify-content: space-between;
-<<<<<<< HEAD
+  justify-content: center;
+  gap: 12px;
   margin: 20px 0;
-=======
-  margin: 18px 0;
->>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
 }
 
-.otp-input {
-  width: 45px;
-<<<<<<< HEAD
-  height: 45px;
-  border: 1px solid #aaa;
+.otpBox input {
+  width: 48px;
+  height: 50px;
+  font-size: 20px;
   border-radius: 8px;
-  font-size: 18px;
+  border: 1px solid #ccc;
   text-align: center;
-=======
-  height: 56px;
-  border: 1px solid #aaa;
-  border-radius: 3px;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 80px;
->>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
+  outline: none;
 }
 
-.btn2 {
-  width: 100%;
-<<<<<<< HEAD
-  margin-top: 20px;
-=======
-  margin-top: 24px;
-  height: 56px;
->>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
-  padding: 12px;
+/* BUTTON */
+.continue-btn {
   background: #c7a24f;
   color: white;
   border: none;
-<<<<<<< HEAD
+  width: 100%;
+  padding: 14px;
   border-radius: 8px;
+  font-size: 18px;
+  margin-top: 10px;
   cursor: pointer;
-=======
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 16px;
->>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
 }
 
-.timer {
+.timer-text {
   margin-top: 15px;
-  color: #666;
+caret-color: #555;
 }

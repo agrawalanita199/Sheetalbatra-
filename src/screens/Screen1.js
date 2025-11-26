@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Screen1.css";
 
+
+  
 export default function Screen1() {
   const navigate = useNavigate();
   const [mobile, setMobile] = useState("");
@@ -12,6 +14,17 @@ export default function Screen1() {
     } else {
       alert("Please enter 10 digit number");
     }
+
+    const goToOTP = () => {
+    navigate("/otp");
+  };
+
+  return (
+    <div>
+      {/* Tumhara UI */}
+      <button onClick={goToOTP}>Continue</button>
+    </div>
+  );
   };
 
   return (
