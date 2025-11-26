@@ -1,12 +1,21 @@
 .screen2 {
   height: 100vh;
+<<<<<<< HEAD
   background-image: url("C:\Users\Vipin Agrawal\sheetal_ui\public\bg.png");
+=======
+  background-image: url("../images/Screen1bg.png");
+>>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   padding-top: 40px;
+=======
+  justify-content: center;
+  
+>>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
 }
 
 .logo2 {
@@ -16,12 +25,36 @@
 
 .card2 {
   width: 80%;
+<<<<<<< HEAD
   max-width: 430px;
   background: white;
   padding: 25px;
   border-radius: 20px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 20px;
+=======
+  max-width: 480px;
+  height: 500px;
+  background: #FFFFFF73;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 20px;
+  
+}
+p{
+  font-size: 20px;
+  font-style: regular;
+  font-weight: 400;
+  margin-top: 21px;
+}
+h2{
+  font-weight: 500;
+  font-size: 32px;
+  font-style: medium;
+  color: #D5B85A;
+>>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
 }
 
 .otp-text {
@@ -32,27 +65,51 @@
 .otp-box {
   display: flex;
   justify-content: space-between;
+<<<<<<< HEAD
   margin: 20px 0;
+=======
+  margin: 18px 0;
+>>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
 }
 
 .otp-input {
   width: 45px;
+<<<<<<< HEAD
   height: 45px;
   border: 1px solid #aaa;
   border-radius: 8px;
   font-size: 18px;
   text-align: center;
+=======
+  height: 56px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 80px;
+>>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
 }
 
 .btn2 {
   width: 100%;
+<<<<<<< HEAD
   margin-top: 20px;
+=======
+  margin-top: 24px;
+  height: 56px;
+>>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
   padding: 12px;
   background: #c7a24f;
   color: white;
   border: none;
+<<<<<<< HEAD
   border-radius: 8px;
   cursor: pointer;
+=======
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+>>>>>>> be26a78efb0fa9e1cc1864bbf4fc6229a9b59a9f
 }
 
 .timer {

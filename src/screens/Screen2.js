@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import "./Screen2.css";
 
@@ -8,6 +8,7 @@ export default function Screen2() {
 
   const [time, setTime] = useState(30);
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const inputRefs = useRef([]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -16,6 +17,26 @@ export default function Screen2() {
 
     return () => clearInterval(timer);
   }, []);
+
+  const handleChange = (value, index) => {
+    if (!/^\d*$/.test(value)) return; // allow only numbers
+
+    const newOtp = [...otp];
+    newOtp[index] = value;
+    setOtp(newOtp);
+
+    // Move to next input if value entered
+    if (value && index < 5) {
+      inputRefs.current[index + 1].focus();
+    }
+  };
+
+  const handleKeyDown = (e, index) => {
+    // If backspace on empty input → go to previous
+    if (e.key === "Backspace" && otp[index] === "" && index > 0) {
+      inputRefs.current[index - 1].focus();
+    }
+  };
 
   return (
     <div className="screen2">
@@ -33,11 +54,10 @@ export default function Screen2() {
               key={idx}
               maxLength="1"
               className="otp-input"
-              onChange={(e) => {
-                const newOtp = [...otp];
-                newOtp[idx] = e.target.value;
-                setOtp(newOtp);
-              }}
+              value={digit}
+              ref={(el) => (inputRefs.current[idx] = el)}
+              onChange={(e) => handleChange(e.target.value, idx)}
+              onKeyDown={(e) => handleKeyDown(e, idx)}
             />
           ))}
         </div>
@@ -46,6 +66,6 @@ export default function Screen2() {
 
         <p className="timer">You can resend the code in {time} seconds</p>
       </div>
-    </div>
-  );
+    </div>
+  );
 }
