@@ -7,7 +7,7 @@ function Screen3() {
   const navigate = useNavigate();
   const goToScreen4 = () => {
     navigate("/product");
-     <button onClick={() => navigate("/product")}>Continue</button>
+    
   };
 
 
@@ -71,8 +71,10 @@ function Screen3() {
         </div>
 
         <button className="btn3">Continue</button>
+         <button  className="continueBtn" onClick={() => navigate("/product")}>Continue</button>
       </div>
     </div>
+     
   );
 }
 

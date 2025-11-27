@@ -1,0 +1,92 @@
+.screen7 {
+  background: url("../images/Screen1bg.png");
+  background-size: cover;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.screen7-container {
+  width: 90%;
+  margin: auto;
+}
+
+.sheetal-logo {
+  width: 150px;
+}
+
+.screen7-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share-btn {
+  background: #c7a24f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  color: #c7a24f;
+  margin: 30px 0;
+}
+
+.section-box {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.section-box h3 {
+  color: #c7a24f;
+  margin-bottom: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.field {
+  flex: 1;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  color: #777;
+}
+
+.field span {
+  display: block;
+  border-bottom: 1px solid #c7a24f;
+  padding: 4px 0;
+}
+
+.prod-row {
+  display: flex;
+  gap: 20px;
+}
+
+.prod-img {
+  width: 120px;
+  height: 160px;
+  border-radius: 8px;
+}
+
+.continue-btn {
+  display: block;
+  margin: 30px auto;
+  background: #c7a24f;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+}

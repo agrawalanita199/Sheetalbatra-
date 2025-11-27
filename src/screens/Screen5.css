@@ -1,0 +1,133 @@
+/* Background */
+.screen5-bg {
+  background-image: url("C:\Users\Vipin Agrawal\sheetal_ui\public\bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+/* Card */
+.screen5-card {
+  width: 80%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.85);
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* Logo */
+.logo {
+  width: 130px;
+  margin-bottom: 10px;
+}
+
+.header-sec {
+  text-align: center;
+}
+
+.title {
+  margin-top: 10px;
+  color: #c7a24f;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Form Rows */
+.row {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #d3c08d;
+  background: transparent;
+  outline: none;
+}
+
+/* Size Selection */
+.size-title {
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.size-box {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.size-btn {
+  padding: 10px 15px;
+  border: 1px solid #d3c08d;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Measurement Box */
+.measure-box {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  background: #f6f1e5;
+  padding: 12px 15px;
+  border-radius: 10px;
+}
+
+.add-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #c7a24f;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Comments */
+.comment-box input {
+  margin-top: 5px;
+}
+
+/* Sales Section */
+.sales-box {
+  margin-top: 30px;
+  background: #ffffffcc;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.sales-box h4 {
+  margin-bottom: 15px;
+}
+
+/* Continue Button */
+.continue-btn {
+  margin-top: 30px;
+  padding: 14px;
+  width: 100%;
+  background: #c7a24f;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}

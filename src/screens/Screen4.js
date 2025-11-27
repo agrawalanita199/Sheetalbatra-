@@ -1,7 +1,13 @@
 import React from "react";
 import "./Screen4.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Screen4() {
+  const navigate = useNavigate();
+    const goToScreen5 = () => {
+      navigate("/screen5");
+       
+    };
   return (
     <div className="screen4-bg">
 
@@ -89,9 +95,12 @@ export default function Screen4() {
           <label>Comments</label>
           <textarea placeholder="Write comment..."></textarea>
         </div>
-
+         
         <div className="continue-box">
           <button className="continue-btn">Continue</button>
+          <button  className="continueBtn" onClick={() => navigate("/screen5")}
+          >Continue</button>
+          
         </div>
 
       </div>
