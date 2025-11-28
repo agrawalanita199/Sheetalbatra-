@@ -1,27 +1,29 @@
 
 .screen2-bg {
-  background-image: url("C:\Users\Vipin Agrawal\sheetal_ui\public\bg.png");   
+ background-image: url("../images/Screen1bg.png");   
+  width: 100%;
+  height: auto;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  min-height: 100vh;
-
+  background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding-top: 80px; /* Figma Logo Margin */
+  font-family: "Jost", sans-serif;
+
 }
 
 /* CENTER CARD */
 .card {
-  width: 90%;
-  max-width: 520px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  padding: 35px 25px;
-  border-radius: 25px;
+   width: 520px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.45);  /* Figma color */
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  margin-top: 40px;   
   text-align: center;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* TEXTS */
@@ -62,17 +64,23 @@
 }
 
 /* BUTTON */
-.continue-btn {
-  background: #c7a24f;
+.btn2 {
+  width: 380px;
+  height: 56px;
+  background: #D5B85A;
   color: white;
   border: none;
-  width: 100%;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 18px;
-  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 20px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
+.screen2-logo {
+  width: 180px;
+  margin-top: 80px; 
+  margin-bottom: 40px; 
+}
+
 
 .timer-text {
   margin-top: 15px;

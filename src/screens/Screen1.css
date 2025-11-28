@@ -1,75 +1,165 @@
-.screen1 {
-  height: 100vh;
-  background-image: url("../images/Screen1bg.png");
+/* Background full screen */
+.screen1-container {
+  background-image: url("../images/Screen1bg.png");   
+  width: 100%;
+  height: auto;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  
+  padding-top: 80px; /* Figma Logo Margin */
+  font-family: "Jost", sans-serif;
 }
 
-.logo {
-  width: 120px;
+/* Logo */
+.screen1-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 60px;
+}
+
+/* Card Box */
+.screen1-card {
+ 
+  width: 480px;
+  background: rgba(255, 255, 255, 0.45); /* Figma exact colour */
+  padding: 40px 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+/* Title */
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #d5b85a;
   margin-bottom: 20px;
 }
 
-.card {
-  width: 80%;
-  max-width: 480px;
-  height: 500px;
-  background: #FFFFFF73;
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 20px;
-  
-}
-
-p{
+/* Subtitle */
+.subtitle {
   font-size: 20px;
-  font-style: regular;
   font-weight: 400;
-  margin-top: 21px;
+  color: #000000;
+  margin-bottom: 40px;
 }
-h2{
+
+/* Mobile Input */
+.mobile-input {
+  width: 382px;
+  height: 56px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding-left: 16px;
+  font-size: 18px;
+  outline: none;
+}
+
+/* Continue Button */
+.continue-btn {
+  width: 382px;
+  height: 56px;
+  background: #d5b85a;
+  border: none;
+  color: white;
+  font-size: 20px;
   font-weight: 500;
+  border-radius: 6px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/* Terms Text */
+.tnc-text {
+  margin-top: 25px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.tnc-link {
+  color: #d5b85a;
+  text-decoration: underline;
+}.screen1-container {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LOGO */
+.screen1-logo {
+  width: 150px;
+  margin-top: 80px;   /* Figma: Top spacing */
+}
+
+/* CARD */
+.screen1-card {
+  width: 520px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.45);  /* Figma color */
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  margin-top: 40px;   
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* TITLE */
+.title {
   font-size: 32px;
-  font-style: medium;
+  font-weight: 500;
   color: #D5B85A;
+  margin-bottom: 12px;
 }
 
-.input {
-  width: 100%;
-  height: 56px;
-  padding: 12px;
-  margin-top: 80px;
-  border-radius: 3px;
-   box-sizing: border-box;
-  border: 1px solid #aaa;
+/* SUBTITLE */
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 30px;
 }
 
-.btn {
-  width: 100%;
-  margin-top: 24px;
+/* INPUT FIELD */
+.mobile-input {
+  width: 380px;
   height: 56px;
-  padding: 12px;
-  background: #c7a24f;
+  border-radius: 4px;
+  border: 1px solid #D9D9D9;
+  padding-left: 16px;
+  font-size: 20px;
+  outline: none;
+  margin-bottom: 24px;
+  appearance: none;       
+}
+
+/* BUTTON */
+.continue-btn {
+  width: 380px;
+  height: 56px;
+  background: #D5B85A;
   color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
+  font-size: 20px;
   cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* TERMS */
+.terms {
   font-size: 16px;
+  color: black;
 }
 
-small {
-  display: block;
-  margin-top: 110px;
-  color: #666;
-}
-
-small a {
-  
-  color: #c7a24f;
+.highlight {
+  color: #D5B85A;
+  cursor: pointer;
 }

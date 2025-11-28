@@ -1,0 +1,179 @@
+
+
+.screen8-container {
+     background-image: url("../images/Screen1bg.png");   
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  padding: 20px 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* LOGO */
+.screen8-logo {
+  width: 211px;
+  height: 118px;
+  position: absolute;
+  top: 29px;
+  left: 23px;
+}
+
+/* LEFT PANELS */
+.left-panels {
+  width: 290px;
+  margin-top: 180px;
+}
+
+.panel-box {
+  width: 281px;
+  height: 135px;
+  background: #FFFFFFA8;
+  backdrop-filter: blur(5px);
+  border: 1px solid #D4D4D4;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+}
+
+.view-btn {
+  background: #D5B85A;
+  color: white;
+  font-size: 11px;
+  padding: 4px 12px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ORDER ITEM */
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.order-status-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #EEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.order-details {
+  margin-left: 10px;
+}
+
+.order-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.order-status {
+  font-size: 12px;
+  color: gray;
+}
+
+/* RIGHT CONTENT AREA */
+.right-content {
+  margin-left: 80px;
+  margin-top: 140px;
+  width: 65%;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 15px;
+}
+
+.tab {
+  background: #EEE;
+  padding: 6px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+}
+
+.tab.active {
+  background: #D5B85A;
+  color: white;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  margin-top: 20px;
+  display: flex;
+  padding: 20px;
+  background: #FFF;
+  border-radius: 12px;
+  border: 1px solid #DDD;
+}
+
+.product-img {
+  width: 90px;
+  height: 140px;
+  border-radius: 6px;
+}
+
+.product-info {
+  margin-left: 20px;
+  width: 100%;
+}
+
+.product-name {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+}
+
+.customer {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  width: 250px;
+  height: 8px;
+  background: #EEE;
+  border-radius: 10px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #D5B85A;
+  border-radius: 10px;
+}
+
+.order-steps {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}

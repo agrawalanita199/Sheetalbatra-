@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../screens/Screen3.css";
+import logo from "../images/logo.png";
 
 
 function Screen3() {
@@ -14,6 +15,7 @@ function Screen3() {
  
     return (
     <div className="screen3-root">
+       {/* <img src={logo} alt="logo" className="screen3-logo" /> */}
       <div className="card3">
         <img src="/logo.png" className="logo3" />
 

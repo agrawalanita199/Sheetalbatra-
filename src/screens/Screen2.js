@@ -1,76 +1,73 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { supabase } from "../lib/supabaseClient";
 import "./Screen2.css";
+import logo from "../images/logo.png";
 
 export default function Screen2() {
-  const location = useLocation();
+
   const navigate = useNavigate();
-  const mobile = location.state?.mobile;
-  const phoneNumber = location.state?.phoneNumber;
+  const location = useLocation();
+
+  const mobile = location.state?.mobile || "XXXXXXXXXX";
+
+  // OTP States
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const inputs = useRef([]);
 
   const [time, setTime] = useState(30);
   const [loading, setLoading] = useState(false);
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
-  const inputRefs = useRef([]);
 
+  // -------------------------
+  // TIMER
+  // -------------------------
   useEffect(() => {
-    const t = setInterval(() => {
-      setTime((prev) => (prev > 0 ? prev - 1 : 0));
+    const timer = setInterval(() => {
+      setTime(prev => (prev > 0 ? prev - 1 : 0));
     }, 1000);
-    return () => clearInterval(t);
+
+    return () => clearInterval(timer);
   }, []);
 
-  const handleChange = (value, index) => {
-    if (!/^\d*$/.test(value)) return;
+
+  // -------------------------
+  // HANDLE OTP INPUT
+  // -------------------------
+  const handleOtp = (value, index) => {
+    if (!/^[0-9]?$/.test(value)) return; // only digits allowed
 
     const newOtp = [...otp];
     newOtp[index] = value;
     setOtp(newOtp);
 
+
+
+    // Move to next box automatically
     if (value && index < 5) {
-      inputRefs.current[index + 1].focus();
+      inputs.current[index + 1].focus();
     }
   };
 
-  const handleKeyDown = (e, index) => {
-    if (e.key === "Backspace" && otp[index] === "" && index > 0) {
-      inputRefs.current[index - 1].focus();
-    }
-  };
-
-  const verifyOTP = async () => {
-    const code = otp.join("");
-
-    if (code.length !== 6) {
-      alert("Enter a valid 6-digit code");
-      return;
-    }
-
+  // -------------------------
+  // VERIFY OTP
+  // -------------------------
+  const verifyOTP = () => {
     setLoading(true);
 
-    const { data, error } = await supabase.auth.verifyOtp({
-      phone: phoneNumber,
-      token: code,
-      type: "sms",
-    });
-
-    setLoading(false);
-
-    if (error) {
-      alert(error.message);
-      return;
-    }
-
-    alert("Login Successful!");
-
-    // Redirect to your home/dashboard after login
-    navigate("/home");
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/userinfo"); // SCREEN 3
+    }, 1000);
   };
 
   return (
+
+
+    
     <div className="screen2-bg">
+      <img src={logo} alt="logo" className="screen2-logo" />
       <div className="card">
+            
+
         <h1 className="title">Welcome to Sheetal Batra</h1>
 
         <p className="subtitle">
@@ -79,6 +76,7 @@ export default function Screen2() {
 
         <p className="otp-text">OTP has been sent to +91 {mobile}</p>
 
+        {/* OTP INPUT BOXES */}
         <div className="otpBox">
           {otp.map((val, i) => (
             <input
@@ -91,13 +89,16 @@ export default function Screen2() {
           ))}
         </div>
 
+        {/* CONTINUE BUTTON */}
         <button className="btn2" onClick={verifyOTP} disabled={loading}>
           {loading ? "Verifying..." : "Continue"}
         </button>
 
+        {/* TIMER */}
         <p className="timer-text">
           You can resend the code in {time} seconds
         </p>
+
       </div>
     </div>
   );

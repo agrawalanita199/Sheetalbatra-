@@ -1,64 +1,49 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "../lib/supabaseClient";
 import "./Screen1.css";
+import logo from "../images/logo.png";
+// import bg from "../images/Screen1bg.png";
 
-
-  
 export default function Screen1() {
-  const navigate = useNavigate();
   const [mobile, setMobile] = useState("");
-  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleContinue = async () => {
-    if (mobile.length !== 10) {
-      alert("Please enter 10 digit number");
-      return;
+  const goToOtp = () => {
+    if (mobile.length === 10) {
+      navigate("/otp", { state: { mobile } });
     }
-
-    setLoading(true);
-
-    const phoneNumber = "+91" + mobile;
-
-    const { data, error } = await supabase.auth.signInWithOtp({
-      phone: phoneNumber,
-    });
-
-    setLoading(false);
-
-    if (error) {
-      alert(error.message);
-      return;
-    }
-
-    // OTP sent successfully → go to Screen2
-    navigate("/otp", { state: { mobile, phoneNumber } });
   };
 
   return (
-    <div className="screen1">
-      <img src="/logo.png" alt="logo" className="logo" />
+    <div
+      className="screen1-container"
+      // style={{ backgroundImage:'url(${bg})'}}
+    >
+      <img src={logo} alt="logo" className="screen1-logo" />
 
-      <div className="card">
-        <h2>Welcome to Sheetal Batra</h2>
-        <p>Your personalised Sheetal Batra experience awaits.</p>
+      <div className="screen1-card">
+        <h1 className="title">Welcome to Sheetal Batra</h1>
+
+        <p className="subtitle">
+          Your personalised Sheetal Batra experience awaits.
+        </p>
 
         <input
-          className="input"
+          className="mobile-input"
           placeholder="Enter your mobile number"
-          value={mobile}
+          maxLength={10}
           onChange={(e) => setMobile(e.target.value)}
         />
 
-        <button className="btn" onClick={handleContinue} disabled={loading}>
-          {loading ? "Sending OTP..." : "Continue"}
+        <button className="continue-btn" onClick={goToOtp}>
+          Continue
         </button>
 
-        <small>
+        <p className="terms">
           By continuing, you agree to our{" "}
-          <a href="#">Terms & Privacy Policy</a>
-        </small>
+          <span className="highlight">Terms & Privacy Policy</span>
+        </p>
       </div>
-    </div>
-  );
+    </div>
+  );
 }
